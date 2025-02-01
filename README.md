@@ -1,10 +1,37 @@
-# Hello Member Web Development GDGOC Telkom University Bandung! 👋
+# Assignment 2 - GDGOC
 
-sebelumnya kalian bisa `git clone https://github.com/mahesabagusr/intemediate-javascript.git` pada cmd kalian, agar kode ini dapat di jalankan di komputer/laptop kalian, jika mengalami kendala, kalian bisa menonton video tutorial berikut : [Tonton Disini](https://www.youtube.com/watch?v=EhxPBMQFCaI)
+## Description
 
-agar kalian dapat menjalankan program diatas, kalian bisa download dan install *Node.js versi 22.13.1 (LTS)* terlebih dahulu melalui link berikut : [Download Disini](https://nodejs.org/en/download). Jika kalian mengalami kendala, bisa menonton video tutorial berikut : [Tonton Disini](https://www.youtube.com/watch?v=mzg1TNVUNtM)
+Assigment 2 - Web Dev - GDGOC-Telkom Bandung - This assignment involves implementing a simple note-taking system in vanilla JavaScript without any frameworks. The system should support basic CRUD (Create, Read, Update, Delete) operations on a list of notes.
 
-untuk mempermudah kalian dalam menjalankan code dari materi, saya sarankan untuk mencoba masing-masing implementasinya pada file *index.js* di luar dari folder Materi, kalian bisa menjalankan kode dengan `node index.js` pada CMD atau terminal vscode kalian
+## Requirements
 
-jika ada yang mau ditanyakan, bisa bertanya melalui discord GDGOC member pada channel #web-chat
+- Use only vanilla JavaScript (no frameworks or libraries).
+- Implement the following functions:
+  - `createNote(heading, description, created_by)`: Adds a new note to the `notes` array.
+  - `readNote()`: Displays all notes in the `notes` array.
+  - `updateNote(id, newHeading, newDescription)`: Updates the note with the given `id`.
+  - `deleteNote(id)`: Deletes the note with the given `id`.
+- Maintain the `created_at` timestamp for each note using `Date.now()`.
 
+## Data Structure
+
+The notes should be stored in the following format:
+
+```js
+let notes = [
+  {
+    id: 1,
+    heading: "Mempelajari Javascript",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    created_by: "John Doe",
+    created_at: 1738146027613, // Timestamp
+  },
+];
+```
+
+## Notes
+
+- Ensure that each new note has a unique `id`.
+- Keep the implementation clean and readable.
+- Do not modify the test code provided above.
