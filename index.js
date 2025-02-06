@@ -42,7 +42,13 @@ const updateNote = (id, heading, description) => {
 };
 
 const deleteNote = () => {
-  // code here ...
+  const index = notes.findIndex((note) => note.id === id);
+  if (index !== -1) {
+    notes.splice(index, 1);
+    console.log(`Note dengan id ${id} telah dihapus.`);
+  } else {
+    console.log(`Note dengan id ${id} tidak ditemukan.`);
+  }
 };
 
 // !!! DO NOT TOUCH !!!
