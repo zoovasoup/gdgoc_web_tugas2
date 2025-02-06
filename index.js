@@ -41,7 +41,7 @@ const updateNote = (id, heading, description) => {
   }
 };
 
-const deleteNote = () => {
+const deleteNote = (id) => {
   const index = notes.findIndex((note) => note.id === id);
   if (index !== -1) {
     notes.splice(index, 1);
