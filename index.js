@@ -22,11 +22,12 @@ const createNote = (heading, description, created_by) => {
 };
 
 const readNote = (id) => {
-  //code here
-};
-
-const readNote = () => {
-  //code here
+  if (id) {
+    const note = notes.find((note) => note.id === id);
+    console.log(note ? note : `Note dengan id ${id} tidak ditemukan.`);
+  } else {
+    console.log(notes);
+  }
 };
 
 const updateNote = (id, heading, description) => {
