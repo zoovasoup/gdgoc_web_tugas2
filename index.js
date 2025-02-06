@@ -9,15 +9,27 @@ let notes = [
   },
 ];
 
-const createNote = () => {
-  // code here ...
+const createNote = (heading, description, created_by) => {
+  const newNote = {
+    id: notes.length + 1,
+    heading,
+    description,
+    created_by,
+    created_at: Date.now(),
+  };
+  notes.push(newNote);
+  return newNote;
+};
+
+const readNote = (id) => {
+  //code here
 };
 
 const readNote = () => {
-  // code here ...
+  //code here
 };
 
-const updateNote = () => {
+const updateNote = (id, heading, description) => {
   // code here ...
 };
 
