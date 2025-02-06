@@ -31,7 +31,14 @@ const readNote = (id) => {
 };
 
 const updateNote = (id, heading, description) => {
-  // code here ...
+  const note = notes.find((note) => note.id === id);
+  if (note) {
+    note.heading = heading || note.heading;
+    note.description = description || note.description;
+    console.log(`Note dengan id ${id} telah diperbarui.`);
+  } else {
+    console.log(`Note dengan id ${id} tidak ditemukan.`);
+  }
 };
 
 const deleteNote = () => {
